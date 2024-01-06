@@ -90,9 +90,9 @@ class OpenPose {
     }
 
     // 创建更换背景的按钮
-  referenceImage() {
-      button.addEventListener("click", () => this.backgroundInput.click());
-  }
+  //referenceImage() {
+  //    button.addEventListener("click", () => this.backgroundInput.click());
+  //}
 
 	// 处理背景图片的加载
   onLoadBackground(e) {
@@ -109,6 +109,26 @@ class OpenPose {
                 originY: 'top',
                 opacity: 0.5
             });
+              /*
+              var width = img.width; // 图片的宽度  
+			  var height = img.height; // 图片的高度  
+			  var minSideLength; // 最小边长  
+			  
+			  if (width < height) {  
+				// 宽度小于高度，所以最短边是宽度  
+				minSideLength = width;  
+				img.scaleX = canvas.width / img.width;
+				img.scaleY = canvas.width / img.width;
+			  } else {  
+				// 宽度大于或等于高度，所以最短边是高度或两者相等  
+				minSideLength = height;  
+				img.scaleX = this.canvas.height / img.height;  
+				img.scaleY = this.canvas.height / img.height;  
+			  }  
+            */
+			this.canvas.setWidth(img.width);
+			this.canvas.setHeight(img.height);
+			
             this.canvas.setBackgroundImage(img, this.canvas.renderAll.bind(this.canvas));
         });
     }
