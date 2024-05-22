@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-openpose-editor-plus"
+description = "Nodes:Openpose Editor Plus"
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/whmc76/ComfyUI-Openpose-Editor-Plus"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Openpose-Editor-Plus"
+Icon = ""
